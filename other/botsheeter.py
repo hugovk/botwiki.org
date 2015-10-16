@@ -214,9 +214,9 @@ if __name__ == "__main__":
         bot = {}
         bot['location'] = validate_location(row[1])
         if "twitter" in bot['location']:
-            if (row[11] == "TRUE" or row[11] == "DECLINED" or row[11]):
-                print("Already added or declined, skip it")
-                continue
+            # if (row[11] == "TRUE" or row[11] == "DECLINED" or row[11]):
+                # print("Already added or declined, skip it")
+                # continue
             twitter_urls.append(bot['location'])
             bot['description'] = row[2]
             bot['tags'] = row[3]

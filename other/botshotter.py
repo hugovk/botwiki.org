@@ -14,7 +14,7 @@ import argparse
 from PIL import Image  # pip install pillow
 from selenium import webdriver  # pip install selenium
 import StringIO
-import os.path
+import os
 import time
 
 
@@ -32,6 +32,9 @@ def do_one_account(driver, url_or_username, outdir, headless):
     im = crop_image(im, headless)
 
     im.save(outfile)
+
+    # Optimise it, assumes pngcrush binary is in your path
+    os.system("pngcrush " + outfile + " " + outfile + "2")
 
 
 def get_url(url_or_username):
