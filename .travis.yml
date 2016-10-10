@@ -3,9 +3,6 @@ language: python
 python:
   - 2.7
 
-# Use container-based infrastructure
-sudo: false
-
 env:
   - DISABLE_NOTIFIER=true
 
@@ -14,6 +11,10 @@ libraries:
     version: "2.6"
 
 install:
+  # Upgrade node.js
+  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
+
   - npm install gulp --global
   - npm install gulp --save-dev
   - npm install
