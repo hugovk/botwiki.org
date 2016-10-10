@@ -13,7 +13,9 @@ libraries:
 install:
   # Upgrade node.js
   - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-  - sudo apt-get install -yg nodejs
+  - sudo apt-get install -y nodejs
+  - node --version
+  - sudo n stable -g
   - node --version
 
   - npm install gulp --global
