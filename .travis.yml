@@ -12,9 +12,8 @@ libraries:
 
 install:
   # Upgrade node.js
-  - sudo add-apt-repository -y ppa:chris-lea/node.js
-  - sudo apt-get -y update
-  - sudo apt-get -y install nodejs
+  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  - sudo apt-get install -yg nodejs
   - node --version
 
   - npm install gulp --global
