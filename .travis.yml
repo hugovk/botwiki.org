@@ -38,4 +38,5 @@ script:
 
   # Cat all the .md files into a single, big file and then check links
   - find content/ -name '*.md' -exec cat {} \; > /tmp/all-the-markdown.md
+  - node --version
   - markdown-link-check /tmp/all-the-markdown.md
