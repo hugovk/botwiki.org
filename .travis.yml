@@ -1,3 +1,8 @@
+# Use the Trusty beta, contains updated Node in Python images
+# https://docs.travis-ci.com/user/trusty-ci-environment#Using-the-Trusty-beta
+sudo: required
+dist: trusty
+
 language: python
 
 python:
@@ -11,15 +16,6 @@ libraries:
     version: "2.6"
 
 install:
-  # Upgrade node.js
-  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - node --version
-  - sudo npm cache clean -f
-  - sudo npm install -g n
-  - sudo n stable -g
-  - node --version
-
   - npm install gulp --global
   - npm install gulp --save-dev
   - npm install
