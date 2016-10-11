@@ -37,7 +37,14 @@ script:
   # Error and style-checker
   - flake8 submission-form-scripts/*.py
 
+  - node --version
+
+  # Check links from a local markdown file
+  - markdown-link-check ./README.md
+
+  # Check links from current dir
+  - cat *.md | markdown-link-check
+
   # Cat all the .md files into a single, big file and then check links
   - find content/ -name '*.md' -exec cat {} \; > /tmp/all-the-markdown.md
-  - node --version
   - markdown-link-check /tmp/all-the-markdown.md
