@@ -15,11 +15,11 @@ env:
   # - name: pycrypto
     # version: "2.6"
 
-# install:
+install:
   # - npm install gulp --global
   # - npm install gulp --save-dev
   # - npm install
-  # - npm install -g markdown-link-check
+  - npm install -g markdown-link-check
 
   # - pip install -U "pip>=1.5.6"
   # - pip install "pycrypto>=2.6"

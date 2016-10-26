@@ -14,7 +14,7 @@ else # this is a PR
   changed_files=`git diff --name-only master`
 fi
 
-echo "$changed_files"
+# echo "$changed_files"
 echo "$changed_files" | grep .md$
 
 exit 0
