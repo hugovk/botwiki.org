@@ -11,31 +11,31 @@ python:
 env:
   - DISABLE_NOTIFIER=true
 
-libraries:
-  - name: pycrypto
-    version: "2.6"
+# libraries:
+  # - name: pycrypto
+    # version: "2.6"
 
-install:
-  - npm install gulp --global
-  - npm install gulp --save-dev
-  - npm install
-  - npm install -g markdown-link-check
+# install:
+  # - npm install gulp --global
+  # - npm install gulp --save-dev
+  # - npm install
+  # - npm install -g markdown-link-check
 
-  - pip install -U "pip>=1.5.6"
-  - pip install "pycrypto>=2.6"
-  - pip install requests pyOpenSSL ndg-httpsclient pyasn1
-  - pip install docutils
-  - pip install -r submission-form-scripts/requirements.txt
+  # - pip install -U "pip>=1.5.6"
+  # - pip install "pycrypto>=2.6"
+  # - pip install requests pyOpenSSL ndg-httpsclient pyasn1
+  # - pip install docutils
+  # - pip install -r submission-form-scripts/requirements.txt
 
 script:
-  - gulp clean
-  - gulp styles
-  - gulp scripts
+  # - gulp clean
+  # - gulp styles
+  # - gulp scripts
 
-  # Python unit tests
-  - python submission-form-scripts/test_botsheeter.py
-  # Error and style-checker
-  - flake8 submission-form-scripts/*.py
+  # # Python unit tests
+  # - python submission-form-scripts/test_botsheeter.py
+  # # Error and style-checker
+  # - flake8 submission-form-scripts/*.py
 
   # Cat all the changed .md files into a single file and then check links
   - tests/changed_md_files.sh
