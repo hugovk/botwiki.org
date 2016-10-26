@@ -14,9 +14,10 @@ libraries:
     version: "2.6"
 
 install:
+  - npm -g install yarn
   - npm install gulp --global
   - npm install gulp --save-dev
-  - npm install
+  - yarn
 
   - pip install -U "pip>=1.5.6"
   - pip install "pycrypto>=2.6"
@@ -33,3 +34,8 @@ script:
   - python submission-form-scripts/test_botsheeter.py
   # Error and style-checker
   - flake8 submission-form-scripts/*.py
+
+cache:
+  directories:
+    - ~/.yarn
+    - ~/.nvm
