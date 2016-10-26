@@ -18,6 +18,7 @@ fi
 cat "$changed_files" | grep .md$ > /tmp/files.txt
 
 # Cat the contents of the changed md files to a single md file
+pwd
 for file in `cat /tmp/files.txt`; do cat "$file"; done
 
 exit 0
