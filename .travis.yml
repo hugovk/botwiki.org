@@ -39,5 +39,7 @@ script:
 
   # Cat all the changed .md files into a single file and then check links
   - tests/changed_md_files.sh > /tmp/changed.md
+  - tests/changed_md_files.sh
+  - cat /tmp/files.txt
   - markdown-link-check /tmp/changed.md
   - cat /tmp/changed.md
